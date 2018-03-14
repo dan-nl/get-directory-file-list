@@ -1,6 +1,6 @@
 {
   "name": "get-directory-file-list",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a directory helper that returns a Promise containing an array of the files found in a directory",
   "author": "dan entous",
   "license": "MIT",
@@ -13,12 +13,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dan-nl/git-directory-file-list.git"
+    "url": "git+https://github.com/dan-nl/get-directory-file-list.git"
   },
   "bugs": {
-    "url": "https://github.com/dan-nl/git-directory-file-list/issues"
+    "url": "https://github.com/dan-nl/get-directory-file-list/issues"
   },
-  "homepage": "https://github.com/dan-nl/git-directory-file-list#readme",
+  "homepage": "https://github.com/dan-nl/get-directory-file-list#readme",
   "scripts": {
     "cover:browser": "npm test -- --coverage-report=lcov",
     "cover:cli": "npm test -- --cov",
