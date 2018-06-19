@@ -3,6 +3,7 @@
 'use strict'
 
 var getDirectoryFileList = require( '../src' )
+var getDirectoryFileListStats = require( '../src/get-directory-list-stats' )
 var path = require( 'path' )
 var tap = require( 'tap' )
 
@@ -84,6 +85,25 @@ tap.test( 'getDirectoryFileList valid directory',
             items,
             expected,
             'should match the expected file list `[ \'.hidden\', \'another.txt\', \'some.txt\' ]`'
+          )
+
+          t.end()
+        }
+      )
+  }
+)
+
+tap.test( 'getDirectoryFileList invalid directory item',
+  function ( t ) {
+    var promises = getDirectoryFileListStats( path.join( __dirname, 'fixtures', 'example' ), [ 'not-in-list' ] )
+
+    Promise.all( promises )
+      .catch(
+        function ( err ) {
+          t.match(
+            err.toString(),
+            'Error: ENOENT: no such file or directory',
+            'should reject with an error containing the message `Error: ENOENT: no such file or directory`'
           )
 
           t.end()
