@@ -1,10 +1,9 @@
 language: node_js
 node_js:
-  - "8"
-  - "7"
   - "6"
-  - "5"
-  - "4"
+  - "8"
+  - "10"
+  - "12"
 notifications:
   email: false
 after_success: 'npm run cover:travis && npm run coveralls'
