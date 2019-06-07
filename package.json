@@ -1,6 +1,6 @@
 {
   "name": "get-directory-file-list",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "a directory helper that returns a Promise containing an array of the files found in a directory",
   "author": "dan entous",
   "license": "MIT",
